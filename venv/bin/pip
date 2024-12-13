@@ -1,5 +1,4 @@
-#!/Users/harshvardhansalve/Desktop/MLproject/venv/bin/python
-
+#!/Users/harshvardhansalve/Desktop/MLproject/venv/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys

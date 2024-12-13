@@ -129,13 +129,13 @@
 #define HAVE_CLOCK 1
 
 /* Define to 1 if you have the `clock_getres' function. */
-/* #undef HAVE_CLOCK_GETRES */
+#define HAVE_CLOCK_GETRES 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if you have the `clock_settime' function. */
-/* #undef HAVE_CLOCK_SETTIME */
+#define HAVE_CLOCK_SETTIME 1
 
 /* Define if the C compiler supports computed gotos. */
 #define HAVE_COMPUTED_GOTOS 1
@@ -282,6 +282,9 @@
 /* Define to 1 if you have the `dup3' function. */
 /* #undef HAVE_DUP3 */
 
+/* Define if you have the '_dyld_shared_cache_contains_path' function. */
+#define HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH 1
+
 /* Defined when any dynamic module loading is enabled. */
 #define HAVE_DYNAMIC_LOADING 1
 
@@ -349,7 +352,7 @@
 /* #undef HAVE_FEXECVE */
 
 /* Define to 1 if you have the `finite' function. */
-#define HAVE_FINITE 1
+/* #undef HAVE_FINITE */
 
 /* Define to 1 if you have the `flock' function. */
 #define HAVE_FLOCK 1
@@ -391,7 +394,7 @@
 #define HAVE_FTRUNCATE 1
 
 /* Define to 1 if you have the `futimens' function. */
-/* #undef HAVE_FUTIMENS */
+#define HAVE_FUTIMENS 1
 
 /* Define to 1 if you have the `futimes' function. */
 #define HAVE_FUTIMES 1
@@ -403,17 +406,17 @@
 #define HAVE_GAI_STRERROR 1
 
 /* Define to 1 if you have the `gamma' function. */
-#define HAVE_GAMMA 1
+/* #undef HAVE_GAMMA */
 
 /* Define if we can use gcc inline assembler to get and set mc68881 fpcr */
 /* #undef HAVE_GCC_ASM_FOR_MC68881 */
 
 /* Define if we can use x64 gcc inline assembler */
-#define HAVE_GCC_ASM_FOR_X64 1
+/* #undef HAVE_GCC_ASM_FOR_X64 */
 
 /* Define if we can use gcc inline assembler to get and set x87 control word
    */
-#define HAVE_GCC_ASM_FOR_X87 1
+/* #undef HAVE_GCC_ASM_FOR_X87 */
 
 /* Define if your compiler provides __uint128_t */
 #define HAVE_GCC_UINT128_T 1
@@ -425,7 +428,7 @@
 #define HAVE_GETC_UNLOCKED 1
 
 /* Define to 1 if you have the `getentropy' function. */
-/* #undef HAVE_GETENTROPY */
+#define HAVE_GETENTROPY 1
 
 /* Define to 1 if you have the `getgrgid_r' function. */
 #define HAVE_GETGRGID_R 1
@@ -765,7 +768,7 @@
 #define HAVE_PREAD 1
 
 /* Define to 1 if you have the `preadv' function. */
-/* #undef HAVE_PREADV */
+#define HAVE_PREADV 1
 
 /* Define to 1 if you have the `preadv2' function. */
 /* #undef HAVE_PREADV2 */
@@ -810,7 +813,7 @@
 #define HAVE_PWRITE 1
 
 /* Define to 1 if you have the `pwritev' function. */
-/* #undef HAVE_PWRITEV */
+#define HAVE_PWRITEV 1
 
 /* Define to 1 if you have the `pwritev2' function. */
 /* #undef HAVE_PWRITEV2 */
@@ -1026,7 +1029,7 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
 
-/* Has stdatomic.h with atomic_int */
+/* Has stdatomic.h with atomic_int and atomic_uintptr_t */
 #define HAVE_STD_ATOMIC 1
 
 /* Define to 1 if you have the `strdup' function. */
@@ -1276,7 +1279,7 @@
 #define HAVE_UTIL_H 1
 
 /* Define to 1 if you have the `utimensat' function. */
-/* #undef HAVE_UTIMENSAT */
+#define HAVE_UTIMENSAT 1
 
 /* Define to 1 if you have the `utimes' function. */
 #define HAVE_UTIMES 1
@@ -1437,7 +1440,7 @@
 #define SIZEOF_LONG 8
 
 /* The size of `long double', as computed by sizeof. */
-#define SIZEOF_LONG_DOUBLE 16
+#define SIZEOF_LONG_DOUBLE 8
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -1517,7 +1520,11 @@
 
 
 /* Define if WINDOW in curses.h offers a field _flags. */
-#define WINDOW_HAS_FLAGS 1
+/* #undef WINDOW_HAS_FLAGS */
+
+/* Define if you want build the _decimal module using a coroutine-local rather
+   than a thread-local context */
+#define WITH_DECIMAL_CONTEXTVAR 1
 
 /* Define if you want documentation strings in extension modules */
 #define WITH_DOC_STRINGS 1
